@@ -1,15 +1,14 @@
-import React from "react";
 import { createStackNavigator } from "react-navigation-stack";
-import TagList from "./TagList";
-import TagPageList from "./TagPageList";
-import TagSubscriber from "./TagSubscriber";
+import KeywordForm from "./KeywordForm";
+import KeywordList from "./KeywordList";
+import KeywordPageList from "./KeywordPageList";
 import WebViewPage from "./WebViewPage";
 
 export default createStackNavigator({
-  TagList: {
-    screen: TagList,
+  KeywordList: {
+    screen: KeywordList,
     navigationOptions: {
-      title: "登録済みのタグ",
+      title: "登録済みのキーワード",
       headerBackTitle: null,
       headerTintColor: "white",
       headerStyle: {
@@ -18,9 +17,10 @@ export default createStackNavigator({
       }
     }
   },
-  TagPageList: {
-    screen: TagPageList,
+  KeywordForm: {
+    screen: KeywordForm,
     navigationOptions: {
+      title: "新しいキーワードを登録",
       headerBackTitle: null,
       headerTintColor: "white",
       headerStyle: {
@@ -29,10 +29,9 @@ export default createStackNavigator({
       }
     }
   },
-  TagSubscriber: {
-    screen: TagSubscriber,
+  KeywordPageList: {
+    screen: KeywordPageList,
     navigationOptions: {
-      title: "新しいタグを登録",
       headerBackTitle: null,
       headerTintColor: "white",
       headerStyle: {

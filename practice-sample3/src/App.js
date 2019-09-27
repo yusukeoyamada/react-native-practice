@@ -16,7 +16,6 @@ class Home extends Component {
     const response = await axios.get(
       "https://qiita.com/api/v2/items?page=1&per_page=5&query=react+native"
     );
-    console.log(response.data);
     if (typeof response.data === "object" && response.data.length > 0) {
       this.setState({
         articles: response.data

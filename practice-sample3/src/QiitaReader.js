@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createAppContainer } from "react-navigation";
 import { Icon } from "react-native-elements";
 import TagNavigation from "./components/TagNavigation";
+import KeywordNavigation from "./components/KeywordNavigation";
 
 const RootNavigator = createBottomTabNavigator({
   TagNavigation: {
@@ -10,9 +11,15 @@ const RootNavigator = createBottomTabNavigator({
     navigationOptions: {
       title: "Tag",
       tabBarLabel: "タグ",
-      tabBarIcon: ({ tintColor, focused }) => {
-        return <Icon name="label" />;
-      }
+      tabBarIcon: ({ tintColor, focused }) => <Icon name={"label"} />
+    }
+  },
+  KeywordNavigation: {
+    screen: KeywordNavigation,
+    navigationOptions: {
+      title: "Keyword",
+      tabBarLabel: "キーワード",
+      tabBarIcon: ({ tintColor, focused }) => <Icon name={"room"} />
     }
   }
 });
